@@ -1,0 +1,44 @@
+/*
+  Localizable.strings
+  project
+
+  Created by ohod on 18/06/1444 AH.
+  
+*/
+
+//onbording
+"Welcome" = "مرحبا";
+"Do you find it difficult to remember to consume products before they expire?" = "هل لديك شكلة بتذكر استخدام المنتجات قبل انتهاء صلاحيتها؟";
+"To add a new product with an expiry date, just click the + button." = "لاضافة منتج جديد بتاريخ انتهاء الصلاحية، فقط اضغط على علامة + ";
+"Set back and Relax" = "استرخي و استمتع";
+"When an item is about to expire, our app will notify you." = "عندما يقترب موعد انتهاء صلاحية المنتج، تطبيقنا سوف يعلمك";
+"Skip" = "تخطى";
+
+//content
+"Products" = "منتجات";
+"See your progress so far" = "انظر الى تقدمك حتى الان";
+"Saved  🥳 " = "توفير";
+"Expired" = "انتهاء";
+"Add a New Product" = "اضف منتج جديد";
+"Expired 😔:" = "انتهاء صلاحيتة 😔 :";
+"Saved 🥳:" ="استخدم قبل انتهاء صلاحيته 🥳:";
+"Saved 🥳" = "استخدم 🥳" ;
+"Expired 😔" = "لم يستخدم 😔";
+" day left" = " يوم متبقي" ;
+" days left" =  " يوم متبقي" ;
+
+
+//additems
+"Product Information" = "معلومات المنتج";
+"Check if you used the product:" = "حدد اذا كنت استخدمت المنتج:" ;
+"Product Name:" = "اسم المنتج:";
+
+
+"Product Emoji:" = "ايموجي المنتج:";
+"Expiration Date:" = "تاريخ انتهاء المنتج:" ;
+
+"Add" = "أضف";
+"Save" ="احفظ" ;
+
+
+
