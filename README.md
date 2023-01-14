@@ -4,10 +4,10 @@
 
 <img width="200" alt="Screenshot 1444-06-21 at 10 17 48 PM" src="https://user-images.githubusercontent.com/55793333/212492558-675155a9-6b4a-4c51-8db9-1c25343bdef4.png">
 
-> ## Big Idea
+# Big Idea
 Inclusion
 
-> ## Challenge Statement
+## Challenge Statement
 Help adults and Anyone with ADHD with attention control.
 
 > ## Solution Concept
