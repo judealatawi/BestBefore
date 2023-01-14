@@ -20,7 +20,7 @@ An application for adults who want and need to track their groceries so that
       For storing local data we used used CoreData.
 
 * ### Local Notifications
-For reminding the user when a product expires we used Local Notifications.
+      For reminding the user when a product expires we used Local Notifications.
 
 ## Demo of the App
 * ### Demo of the App in English
