@@ -4,6 +4,7 @@
 
 ![](https://img.shields.io/badge/-Swiftui-red)
 
+<img width="357" alt="Screenshot 1444-06-21 at 10 17 48 PM" src="https://user-images.githubusercontent.com/55793333/212492558-675155a9-6b4a-4c51-8db9-1c25343bdef4.png">
 
 ## Big Idea
 Inclusion
