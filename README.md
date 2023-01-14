@@ -1,7 +1,9 @@
 # BestBefore <a name="TOP"></a>
-<img src="BestBefore/BestBefore/Assets.xcassets/AppIcon.appiconset/AppIcon.jpg" alt="drawing" width="150"/>
+<img src="BestBefore/BestBefore/Assets.xcassets/AppIcon.appiconset/AppIcon.jpg" alt="drawing" width="200"/>
+<img src="" alt="drawing" width="200"/>
+
 ![](https://img.shields.io/badge/-Swiftui-red)
-![](https://img.shields.io/badge/-CoreData-gray)
+
 
 ## Big Idea
 Inclusion
@@ -21,9 +23,9 @@ Local Notifications
 https://user-images.githubusercontent.com/68162866/211813931-01b992a2-34ed-4c9b-acc7-1d661171e668.MOV
 
 ## Challenge Summary
-An App that provides an easy way for someone with permanent or temporary speech impediment who want(s) to efficiently communicate with others face to face by clear text size and spoken content
+<!-- An App that provides an easy way for someone with permanent or temporary speech impediment who want(s) to efficiently communicate with others face to face by clear text size and spoken content -->
 
-<img width="956" alt="Screen Shot 1444-06-19 at 2 36 32 PM" src="https://user-images.githubusercontent.com/68162866/212056863-0fd108c4-d0bf-4c17-8849-50f4929a75b9.png">
+<!-- <img width="956" alt="Screen Shot 1444-06-19 at 2 36 32 PM" src="https://user-images.githubusercontent.com/68162866/212056863-0fd108c4-d0bf-4c17-8849-50f4929a75b9.png"> -->
 
 ## AppStore link
-https://apps.apple.com/app/lucid-speech-assistant/id1664144062
+
