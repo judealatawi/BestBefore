@@ -8,7 +8,7 @@
 Inclusion
 
 ## Challenge Statement
-Help adults and Anyone with ADHD with attention control.
+Help adults and anyone with ADHD with attention control.
 
 ## Solution Concept
 An application for adults who want and need to track their groceries so that they avoid them expiring.
