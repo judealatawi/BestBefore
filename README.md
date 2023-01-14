@@ -1,10 +1,7 @@
 # BestBefore <a name="TOP"></a>
 <img src="BestBefore/BestBefore/Assets.xcassets/AppIcon.appiconset/AppIcon.jpg" alt="drawing" width="200"/>
-<img src="" alt="drawing" width="200"/>
 
-![](https://img.shields.io/badge/-Swiftui-red)
-
-<img width="357" alt="Screenshot 1444-06-21 at 10 17 48 PM" src="https://user-images.githubusercontent.com/55793333/212492558-675155a9-6b4a-4c51-8db9-1c25343bdef4.png">
+<img width="200" alt="Screenshot 1444-06-21 at 10 17 48 PM" src="https://user-images.githubusercontent.com/55793333/212492558-675155a9-6b4a-4c51-8db9-1c25343bdef4.png">
 
 ## Big Idea
 Inclusion
