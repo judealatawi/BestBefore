@@ -34,11 +34,11 @@ class UIEmojiTextField: UITextField {
 
 struct EmojiTextField: UIViewRepresentable {
     @Binding var text: String
-    var placeholder: String = ""
-    
+    let holder = NSLocalizedString("Product Emoji:",comment: "the product expired")
+
     func makeUIView(context: Context) -> UIEmojiTextField {
         let emojiTextField = UIEmojiTextField()
-        emojiTextField.placeholder = placeholder
+        emojiTextField.placeholder = holder
         emojiTextField.text = text
         emojiTextField.delegate = context.coordinator
         return emojiTextField

@@ -22,26 +22,28 @@ struct OnBording_Previews: PreviewProvider {
 }
 struct WalkthroughScreen: View{
     @AppStorage("currentPage") var currentPage = 1
+    let icon = NSLocalizedString("chevron.right",comment: "")
     var body: some View{
         ZStack{
             
             if currentPage == 1 {
-                ScreenView(image: "bag", title: "Welcome", detail: "Do you find it difficult to remember to consume products before they expire?", bgColor: Color("green"))
+                ScreenView(image: "bag", title: Text("Welcome"), detail: Text("Do you find it difficult to remember to consume products before they expire?"), bgColor: Color("green"))
                     .transition(.scale)
             }
             
             if currentPage == 2 {
-                ScreenView(image: "onb", title: "Add", detail: "To add a new product with an expiry date, just click the + button.", bgColor: Color("green"))
+                ScreenView(image: "onbording1", title: Text("Add"), detail: Text("To add a new product with an expiry date, just click the + button."), bgColor: Color("green"))
                     .transition(.scale)
             }
             
             if currentPage == 3 {
-                ScreenView(image: "onb2", title: "Set back and Relax", detail: "When an item is about to expire, our app will notify you.", bgColor: Color("green"))
+                ScreenView(image: "onbording2", title: Text("Set back and Relax"), detail: Text("When an item is about to expire, our app will notify you."), bgColor: Color("green"))
                     .transition(.scale)
                 
             }
             
         }.onAppear{
+            NotificationManagerClass.instance.requestAuthorization()
          
         }
         
@@ -61,7 +63,10 @@ struct WalkthroughScreen: View{
                     }
                     
                 }, label: {
-                    Image(systemName: "chevron.right").font(.system(size: 20, weight: .semibold))
+                    
+                    
+                    
+                    Image(systemName: icon ).font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.black)
                         .frame(width: 60, height: 60)
                         .background(Color.white)
@@ -86,8 +91,8 @@ struct WalkthroughScreen: View{
 
 struct ScreenView: View {
     var image: String
-    var title: String
-    var detail: String
+    var title: Text
+    var detail: Text
     var bgColor: Color
     
     @AppStorage("currentPage") var currentPage = 1
@@ -111,7 +116,9 @@ struct ScreenView: View {
                             }
                             
                         }, label: {
-                            Image(systemName: "chevron.left")
+                            let icon2 = NSLocalizedString("chevron.left",comment: "")
+
+                            Image(systemName: icon2)
                                 .foregroundColor(.white)
                                 .padding(.vertical,10)
                                 .padding(.horizontal)
@@ -138,14 +145,15 @@ struct ScreenView: View {
                     .padding()
                 
                 Spacer()
+                
                 Image(image)
                     .resizable().cornerRadius(21).aspectRatio(contentMode: .fit).padding()
-                Text(title)
+                title
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.black).padding(.top)
                 
-                Text(detail).font(.system(size: 26)).foregroundColor(.black).fontWeight(.medium).kerning(1.3).multilineTextAlignment(.center).padding(.horizontal)
+                detail.font(.system(size: 26)).foregroundColor(.black).fontWeight(.medium).kerning(1.3).multilineTextAlignment(.center).padding(.horizontal)
                 
                 Spacer(minLength: 120)
                 

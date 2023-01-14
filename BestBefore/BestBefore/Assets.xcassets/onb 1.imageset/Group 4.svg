@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="336px" height="102px" viewBox="0 0 336 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="hi-fi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="336" height="102" rx="14"></rect>
+            <rect id="Rectangle" fill="#F3F3F3" x="9" y="5.89208633" width="90" height="90" rx="14"></rect>
+            <text id="Add-New-Product" font-family="SFProRounded-Semibold, SF Pro Rounded" font-size="21" font-weight="500" fill="#000000">
+                <tspan x="109" y="58">Add New Product</tspan>
+            </text>
+            <text id="􀅼" font-family="SFProRounded-Regular, SF Pro Rounded" font-size="48" font-weight="normal" fill="#C18E59">
+                <tspan x="28.6875" y="70">􀅼</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -39,27 +39,26 @@ struct EditFoodView: View {
                     }
                     
                 }
-                    HStack{
-                        Text("Product Name:").font(.system(size: 24, weight: .regular, design: .rounded))
-                        TextField( "", text: $name).padding().font(.custom("SF Pro Rounded", size: 21)).fontWeight(.semibold).accessibilityLabel(Text("Text field to modify the Product Name"))
-                        
-                    }
-                    HStack{
-                        Text("Product Emoji:").font(.system(size: 24, weight: .regular, design: .rounded))
-                        EmojiTextField(text: $emojii, placeholder: "").padding().font(.custom("SF Pro Rounded", size: 21)).fontWeight(.semibold).accessibilityLabel(Text("Text field to modify the Product emoji"))
-                    }
+                    
+                        TextField( "Product Name:", text: $name).padding().font(.custom("SF Pro Rounded", size: 21)).fontWeight(.semibold).accessibilityLabel(Text("Text field to modify the Product Name"))
+                    
+                  
+                        EmojiTextField(text: $emojii).padding().font(.custom("SF Pro Rounded", size: 21)).fontWeight(.semibold).accessibilityLabel(Text("Text field to modify the Product emoji"))
                     VStack{
                         HStack{
-                            Text("Expiration Date:").font(.system(size: 24, weight: .regular, design: .rounded))
-                            Spacer().accessibilityLabel(Text("Calender to modify the Product expiration Date"))
+                            Text("Expiration Date:")
+                            .accessibilityLabel(Text("Calender to modify the Product expiration Date"))
+                            Spacer()
                         }
-                        DatePicker("",selection: $exp, in: Date()..., displayedComponents: .date)
+                        DatePicker("",selection: $exp, in: Date()..., displayedComponents: .date).colorScheme(.light)
                             .font(.system(size: 15)).foregroundColor(.gray).datePickerStyle(.graphical)
                     }
                     
-                }
+                }.listRowBackground(Color.white)
                Button {
                     DataController().editFood(food: food, name: name, context: managedObjContext, emoji: emojii, exp: exp, saved: check)
+                   NotificationManagerClass.instance.ScheduleNotification(date: exp,body: name)
+
                     dismes()
                     
                 } label: {
@@ -68,12 +67,12 @@ struct EditFoodView: View {
                         .font(.custom("SF Pro Rounded", size: 24))
                         .fontWeight(.regular)
                     
-                }.frame(maxWidth: .infinity)
+                }.listRowBackground(Color.white).frame(maxWidth: .infinity)
                     .foregroundColor(.black)
                     .background(Color("green"))
                     .cornerRadius(8)
                 
-            }.foregroundColor(Color.black)
+            }.scrollContentBackground(.hidden).foregroundColor(Color.black)
                 .onAppear{
                     name = food.name!
                     emojii = food.emoji!

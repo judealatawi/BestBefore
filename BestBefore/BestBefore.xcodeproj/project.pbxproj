@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E953659429703EEB00E225B6 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E953659229703EEB00E225B6 /* FoodModel.xcdatamodeld */; };
+		E98784032972DADD00AFC48A /* UserNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98784022972DADD00AFC48A /* UserNotificationsView.swift */; };
 		E9C71308296AF387003560A1 /* BestBeforeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C71307296AF387003560A1 /* BestBeforeApp.swift */; };
 		E9C7130C296AF387003560A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C7130B296AF387003560A1 /* Assets.xcassets */; };
 		E9C7130F296AF387003560A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C7130E296AF387003560A1 /* Preview Assets.xcassets */; };
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		E953659329703EEB00E225B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E98784022972DADD00AFC48A /* UserNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationsView.swift; sourceTree = "<group>"; };
+		E98784042972EFFB00AFC48A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9C71304296AF387003560A1 /* Best Before.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Before.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C71307296AF387003560A1 /* BestBeforeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBeforeApp.swift; sourceTree = "<group>"; };
 		E9C7130B296AF387003560A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 			children = (
 				E9C7135F297018E8003560A1 /* EmojiKeybored.swift */,
 				E9C71359296F2EF2003560A1 /* ProgressBar.swift */,
+				E98784022972DADD00AFC48A /* UserNotificationsView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -320,6 +324,7 @@
 				E953659429703EEB00E225B6 /* FoodModel.xcdatamodeld in Sources */,
 				E9C71350296D7E3F003560A1 /* DataController.swift in Sources */,
 				E9C71308296AF387003560A1 /* BestBeforeApp.swift in Sources */,
+				E98784032972DADD00AFC48A /* UserNotificationsView.swift in Sources */,
 				E9C71354296D8563003560A1 /* AddFoodView.swift in Sources */,
 				E9C7135A296F2EF2003560A1 /* ProgressBar.swift in Sources */,
 				E9C71360297018E8003560A1 /* EmojiKeybored.swift in Sources */,
@@ -364,6 +369,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9C71340296C312C003560A1 /* ar */,
+				E98784042972EFFB00AFC48A /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -491,24 +497,31 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"BestBefore/Preview Content\"";
 				DEVELOPMENT_TEAM = CLBBAVL4JN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BestBefore;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twq.jude.Gros;
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twq.jude.BestBefore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,24 +534,31 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"BestBefore/Preview Content\"";
 				DEVELOPMENT_TEAM = CLBBAVL4JN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BestBefore;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twq.jude.Gros;
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twq.jude.BestBefore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

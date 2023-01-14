@@ -16,11 +16,10 @@ struct ContentView: View {
     @State private var num = 0
     @State var progressValue: Double = 0.0
     
-    
-    var body: some View {
+   var body: some View {
         NavigationView{
             VStack(alignment: .leading){
-                Text("See your progress so far")
+                Text("See your progress so far").foregroundColor(.black)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding(.horizontal)
                 
@@ -59,26 +58,17 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity,maxHeight: 33)
                             .overlay(){
                                 Group{
-                                    Text("Expired 😔").accessibilityLabel(Text("Number of Expired products ")) + Text("\(Int(totalfailed()))")
+                                    Text("Expired 😔").accessibilityLabel(Text("Number of Expired products ")) + Text(" \(Int(totalfailed()))")
                                     
                                 }.lineLimit(2).foregroundColor(.black)
                                     .font(.system(size: 21, weight: .medium, design: .rounded))
-                                
                             }
                             .foregroundColor(Color("red"))
                             .cornerRadius(8.0)
                     }.padding(.trailing)
                     
                 }.padding(.horizontal,10)
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
                 List {
                     
                     HStack{
@@ -96,13 +86,13 @@ struct ContentView: View {
                         HStack{
                             VStack(alignment: .leading,spacing: 6){
                                 Text("Add a New Product").accessibilityLabel(Text("Add a new product by clicking the plus sign"))
-                                    .font(.system(size: 21, weight: .semibold, design: .rounded))
+                                    .font(.system(size: 21, weight: .semibold, design: .rounded)).foregroundColor(.black)
                                 
                             }
                         }
                         Spacer()
                         
-                    }.frame(maxWidth: .infinity ,maxHeight: 102)
+                    }.listRowBackground(Color.white).frame(maxWidth: .infinity ,maxHeight: 102)
                         .background(Color(.white))
                         .cornerRadius(21)
                     
@@ -121,7 +111,6 @@ struct ContentView: View {
                                             .frame(width: 90,height: 88)
                                             .background(Color("green"))
                                             .cornerRadius(21)
-                                        //.padding(.vertical).padding(10)
                                         
                                         HStack{
                                             VStack(alignment: .leading,spacing: 6){
@@ -144,15 +133,53 @@ struct ContentView: View {
                                     
                                     
                                 }
-                            }
+                            }.listRowBackground(Color.white)
                             
                         }
                         
                     }.onDelete(perform: deletFood)
                     
-                    //Divider()
-                    Text("Expired 😔:").accessibilityLabel(Text("expired products ")).foregroundColor(.black)
+                    
+                    Text("Saved 🥳:").foregroundColor(.black)
+                        .listRowBackground(Color.white).font(.system(size: 21, weight: .semibold, design: .rounded))
+                    ForEach(food){ f in
+                        if(f.saved == true ){
+                            VStack{
+                                HStack{
+                                    NavigationLink(destination: EditFoodView(food : f)){
+                                        Text(f.emoji!)
+                                            .font(.system(size: 48))
+                                            .frame(width: 90,height: 88)
+                                            .cornerRadius(21)
+                                        
+                                        HStack{
+                                            VStack(alignment: .leading,spacing: 6){
+                                                Text(f.name!)
+                                                    .foregroundColor(.black)
+                                                    .font(.system(size: 21, weight: .semibold, design: .rounded))
+                                                
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    
+                                    
+                                }
+                            }.background(Color("green")).opacity(0.4).cornerRadius(21)
+                            
+                        }
+                        
+                        
+                    }.onDelete(perform: deletFood)
+                    
+                    Text("Expired 😔:").listRowBackground(Color.white)
+                        .accessibilityLabel(Text("expired products "))
+                        .foregroundColor(.black)
                         .font(.system(size: 21, weight: .semibold, design: .rounded))
+                    
                     ForEach(food){ f in
                         
                         let now = Date()
@@ -172,10 +199,6 @@ struct ContentView: View {
                                                 Text(f.name!)
                                                     .foregroundColor(.black)
                                                     .font(.system(size: 21, weight: .semibold, design: .rounded))
-                                                
-                                                
-                                                formate(no: n)
-                                                    .foregroundColor(.gray)
                                             }
                                         }
                                         
@@ -191,65 +214,26 @@ struct ContentView: View {
                         }
                         
                     }.onDelete(perform: deletFood)
+
                     
-                    Text("Saved 🥳:").foregroundColor(.black)
-                        .font(.system(size: 21, weight: .semibold, design: .rounded))
-                    ForEach(food){ f in
-                        
-                        let now = Date()
-                        let dayAgo = now - 86400
-                        let timeInterval = f.exp!.timeIntervalSince(dayAgo)/60/60/24
-                        let n = Int(timeInterval)
-                        if(f.saved == true ){
-                            VStack{
-                                HStack{
-                                    NavigationLink(destination: EditFoodView(food : f)){
-                                        Text(f.emoji!)
-                                            .font(.system(size: 48))
-                                            .frame(width: 90,height: 88)
-                                        //.background(Color("green"))
-                                            .cornerRadius(21)
-                                        //.padding(.vertical).padding(10)
-                                        
-                                        HStack{
-                                            VStack(alignment: .leading,spacing: 6){
-                                                Text(f.name!)
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 21, weight: .semibold, design: .rounded))
-                                                
-                                                
-                                                formate(no: n)
-                                                    .foregroundColor(.gray)
-                                            }
-                                        }
-                                        
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    
-                                    
-                                }
-                            }.background(Color("green")).opacity(0.4).cornerRadius(21)
-                            
-                        }
-                        
-                    }.onDelete(perform: deletFood)
-                    
-                }.cornerRadius(21)
+                }.listRowBackground(Color.pink).scrollContentBackground(.hidden)
                 
-            }.navigationTitle("Products")
+            }.background(Color("gray"))
             
-                .accentColor(Color("green"))
+                .navigationTitle("Products").colorScheme(.light)
+
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
                         EditButton()
                     }
                 }.sheet(isPresented: $showAddView){
                     AddFoodView()
-                }.background(Color("gray"))
+                }
             
-        }.navigationViewStyle(.stack).accentColor(Color("brown"))
+        }
+        
+        .foregroundColor(.black).navigationViewStyle(StackNavigationViewStyle())
+        //.accentColor(Color("brown"))
         
     }
     

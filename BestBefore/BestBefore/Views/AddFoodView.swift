@@ -6,7 +6,11 @@
 //
 
 import SwiftUI
-
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
 struct AddFoodView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismes
@@ -34,39 +38,41 @@ struct AddFoodView: View {
             Form{
                 Section(header: Text("Product Information").font(.system(size: 24, weight: .semibold, design: .rounded))) {
                     HStack{
-                        Text("Product Name:").font(.system(size: 24, weight: .regular, design: .rounded))
-                        TextField( "", text: $name).padding().accessibilityLabel(Text("Text field to enter the Product Name"))
+                        TextField( "Product Name:", text: $name){UIApplication.shared.endEditing()}.padding().accessibilityLabel(Text("Text field to enter the Product Name")).colorScheme(.light)
                         
                     }
                     HStack{
-                        Text("Product Emoji:").font(.system(size: 24, weight: .regular, design: .rounded))
-                        EmojiTextField(text: $emoji, placeholder: "").padding().accessibilityLabel(Text("Text field to enter the Product Emoji"))
+                      
+                        EmojiTextField(text: $emoji).colorScheme(.light)
+                        .padding().accessibilityLabel(Text("Text field to enter the Product Emoji"))
                     }
                     VStack{
                         HStack{
-                            Text("Expiration Date:").font(.system(size: 24, weight: .regular, design: .rounded)).accessibilityLabel(Text("Calender to enter the Product Expiration date"))
+                          Text("Expiration Date:")
+                                .accessibilityLabel(Text("Calender to enter the Product Expiration date"))
                             Spacer()
                         }
-                        DatePicker("",selection: $exp, in: Date()..., displayedComponents: .date)
+                        DatePicker("",selection: $exp, in: Date()..., displayedComponents: .date).colorScheme(.light)
                             .font(.system(size: 15)).foregroundColor(.gray).datePickerStyle(.graphical)
                     }
                     
-                }
+                }.listRowBackground(Color.white)
                 
                 Button {
                     DataController().addFood(name: name, context: managedObjContext, emoji: emoji, exp: exp)
+                    NotificationManagerClass.instance.ScheduleNotification(date: exp,body: name)
                     dismes()
                 } label: {
                     Text("Add")
                         .frame(maxWidth: .infinity,maxHeight: 39)
                         .font(.system(size: 24, weight: .regular, design: .rounded)).accessibilityLabel(Text("Add button"))
                     
-                }.frame(maxWidth: .infinity)
+                }.listRowBackground(Color.white).frame(maxWidth: .infinity)
                     .foregroundColor(.black)
                     .background(Color("green"))
                     .cornerRadius(8)
                 
-            }.foregroundColor(Color.black)
+            }.scrollContentBackground(.hidden).foregroundColor(Color.black)
         }.background(Color("gray"))
     }
 }
