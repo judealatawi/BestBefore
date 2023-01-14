@@ -17,7 +17,7 @@ An application for adults who want and need to track their groceries so that
 * ### SwiftUI
 
 * ### CoreData
-For storing local data we used used CoreData.
+      For storing local data we used used CoreData.
 
 * ### Local Notifications
 For reminding the user when a product expires we used Local Notifications.
@@ -40,6 +40,6 @@ An app that makes it simple for someone with ADHD to keep track of and be alerte
 ![Best Before 001](https://user-images.githubusercontent.com/55793333/212495028-71e58d3d-6f80-4708-845d-175ad11e4c38.jpeg)
 
 ## Download our App
-[BestBefore](https://apps.apple.com/app/bestbefore-track-your-product/id1664816580).
+[BestBefore](https://apps.apple.com/app/bestbefore-track-your-product/id1664816580)
 
 
