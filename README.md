@@ -19,12 +19,12 @@ CoreData
 Local Notifications
 
 ## Demo of the App
-<!-- https://user-images.githubusercontent.com/68162866/211813931-01b992a2-34ed-4c9b-acc7-1d661171e668.MOV
- -->
+
+
 ## Challenge Summary
-<!-- An App that provides an easy way for someone with permanent or temporary speech impediment who want(s) to efficiently communicate with others face to face by clear text size and spoken content -->
+An app that makes it simple for someone with ADHD to keep track of and be alerted of products that are about to expire.
 
-<!-- <img width="956" alt="Screen Shot 1444-06-19 at 2 36 32 PM" src="https://user-images.githubusercontent.com/68162866/212056863-0fd108c4-d0bf-4c17-8849-50f4929a75b9.png"> -->
+![Best Before 001](https://user-images.githubusercontent.com/55793333/212495028-71e58d3d-6f80-4708-845d-175ad11e4c38.jpeg)
 
-## AppStore link
-
+## Download our App 
+https://apps.apple.com/app/bestbefore-track-your-product/id1664816580
