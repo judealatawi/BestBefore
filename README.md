@@ -4,24 +4,26 @@
 
 <img width="200" alt="Screenshot 1444-06-21 at 10 17 48 PM" src="https://user-images.githubusercontent.com/55793333/212492558-675155a9-6b4a-4c51-8db9-1c25343bdef4.png">
 
-# Big Idea
+## Big Idea
 Inclusion
 
 ## Challenge Statement
 Help adults and Anyone with ADHD with attention control.
 
-> ## Solution Concept
+## Solution Concept
 An application for adults who want and need to track their groceries so that they avoid them expiring.
 
-> ## Technologies & Tools
+## Technologies & Tools
 SwiftUI
-CoreData
+> ##CoreData
+For storing local data we've used CoreData
+
 Local Notifications
 
-> ## Demo of the App
+## Demo of the App
 
 
-> ## Challenge Summary
+## Challenge Summary
 An app that makes it simple for someone with ADHD to keep track of and be alerted of products that are about to expire.
 
 ![Best Before 001](https://user-images.githubusercontent.com/55793333/212495028-71e58d3d-6f80-4708-845d-175ad11e4c38.jpeg)
