@@ -15,10 +15,17 @@ An application for adults who want and need to track their groceries so that
 
 ## Technologies & Tools
 SwiftUI
-> ##CoreData
+CoreData
 For storing local data we've used CoreData
 
 Local Notifications
+
+
+
+* ### CoreData
+  
+For storing local data we used used CoreData
+
 
 ## Demo of the App
 
