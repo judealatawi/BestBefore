@@ -23,7 +23,9 @@ For storing local data we used used CoreData.
 For reminding the user when a product expires we used Local Notifications.
 
 ## Demo of the App
-
+* ### Demo of the App in English
+https://user-images.githubusercontent.com/55793333/212498198-a941c3db-aa23-4dc0-94ad-6b8a7f1e9eb8.mp4
+* ### Demo of the App in Arabic
 
 ## Challenge Summary
 An app that makes it simple for someone with ADHD to keep track of and be alerted of products that are about to expire.
