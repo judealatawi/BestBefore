@@ -14,18 +14,13 @@ Help adults and Anyone with ADHD with attention control.
 An application for adults who want and need to track their groceries so that they avoid them expiring.
 
 ## Technologies & Tools
-SwiftUI
-CoreData
-For storing local data we've used CoreData
-
-Local Notifications
-
-
+* ### SwiftUI
 
 * ### CoreData
-  
-For storing local data we used used CoreData
+For storing local data we used used CoreData.
 
+* ### Local Notifications
+For reminding user when a product expires we used Local Notifications.
 
 ## Demo of the App
 
