@@ -19,17 +19,23 @@ An application for adults who want and need to track their groceries so that
 
 * ### Local Notifications
       For reminding the user when a product expires we used Local Notifications.
+      
+* ### Localization
+      The app is available in both Arabic and English.
+      
+* ### Accessibility
+      The app supports Voice over
+
 
 ## Demo of the App
+
 * ### Demo of the App in English
 
 https://user-images.githubusercontent.com/55793333/212498683-4a2c42c1-b505-416c-9801-6313820f47c3.mp4
 
 * ### Demo of the App in Arabic
 
-
 https://user-images.githubusercontent.com/55793333/212499308-488cda4e-f093-4996-9a93-0e2f1c8c1aad.mp4
-
 
 
 ## Challenge Summary
